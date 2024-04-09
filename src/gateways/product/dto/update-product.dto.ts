@@ -1,12 +1,15 @@
 import { ApiProperty } from '@nestjs/swagger';
+import { ProductStatus } from 'src/domain/pedido/product.domain';
 
-export class CreateProductDTO {
+export class UpdateProductDto {
   @ApiProperty()
   name: string;
   @ApiProperty()
   price: number;
   @ApiProperty()
-  categoryId: string;
+  category: string;
+  @ApiProperty()
+  status: ProductStatus;
   @ApiProperty()
   description: string;
 }
